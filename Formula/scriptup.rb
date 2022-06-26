@@ -5,20 +5,20 @@
 class Scriptup < Formula
   desc "Migration tool for shell script executions"
   homepage "https://github.com/mg98/scriptup"
-  version "0.1.3"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mg98/scriptup/releases/download/v0.1.3/scriptup_0.1.3_darwin_arm64.tar.gz"
-      sha256 "1db1874ae6500ec2cc041d0a14a0f8b5ce1d533fe3ed79238f76bf0470af06b9"
+      url "https://github.com/mg98/scriptup/releases/download/v0.1.0/scriptup_0.1.0_darwin_arm64.tar.gz"
+      sha256 "1b3c8dda3b7febbb9f6a8d06fb8ffb58ba3d8bdbdbad2fadac7a05cf4caf7f7c"
 
       def install
         bin.install "scriptup"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mg98/scriptup/releases/download/v0.1.3/scriptup_0.1.3_darwin_amd64.tar.gz"
-      sha256 "4fe69eb48e5a1a2dcc26647cb2b718dd71619341f0b7265827bdc9a108348133"
+      url "https://github.com/mg98/scriptup/releases/download/v0.1.0/scriptup_0.1.0_darwin_amd64.tar.gz"
+      sha256 "4c18d6ad3da42c980c231505ec96c77cb2b41d62bb84f36ae211174e2390a47e"
 
       def install
         bin.install "scriptup"
@@ -27,25 +27,25 @@ class Scriptup < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/mg98/scriptup/releases/download/v0.1.3/scriptup_0.1.3_linux_armv6.tar.gz"
-      sha256 "e5c2935c20311ee2d3e925515bac8a2e22d75b0c370b642e22361d3e23b1f4ba"
-
-      def install
-        bin.install "scriptup"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mg98/scriptup/releases/download/v0.1.3/scriptup_0.1.3_linux_arm64.tar.gz"
-      sha256 "76a152b42195914dfaf2308b5bc9f886086d6f4fabc003c9e39a28c68d4dbab7"
+      url "https://github.com/mg98/scriptup/releases/download/v0.1.0/scriptup_0.1.0_linux_arm64.tar.gz"
+      sha256 "2e6f3e04dda739f92585fddfb119654b0daba0ef056427fbde3b467eabad6f41"
 
       def install
         bin.install "scriptup"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mg98/scriptup/releases/download/v0.1.3/scriptup_0.1.3_linux_amd64.tar.gz"
-      sha256 "3c7ea77c781ec6db4d7fc24f50ce1004fc99d94acd32d68d3e58dde2f153102c"
+      url "https://github.com/mg98/scriptup/releases/download/v0.1.0/scriptup_0.1.0_linux_amd64.tar.gz"
+      sha256 "70eceb3b85a1ce22041bdf54536f3bd5ba3c28f4ebd130265b1f08fdcf19b1de"
+
+      def install
+        bin.install "scriptup"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/mg98/scriptup/releases/download/v0.1.0/scriptup_0.1.0_linux_armv6.tar.gz"
+      sha256 "b7e131cb6c7b22180dd3518fec09ca6ad0b664e75ef6ddacc622ad0a59d3bb27"
 
       def install
         bin.install "scriptup"
